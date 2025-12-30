@@ -51,8 +51,6 @@
 4.  **[Frontend]**가 사용자가 조작할 수 있는 직관적인 화면을 구현.
 5.  **[QA]**가 최종 화면에서 반복 테스트를 수행하며 완성도 점검.
 
----
-## 🏢 Volley-RAG 프로젝트 팀 R&R (역할 분담표)직무 (Job Title)담당자핵심 역할 요약PM & AI Architect본인기획 총괄, AI 모델 설계, 시스템 프롬프트 작성Backend Engineer팀원 ARAG 파이프라인 구축, DB 연동, 서버 로직 개발Frontend & Designer팀원 B웹 화면(UI) 구현, 발표 자료(PPT/포스터) 제작Data Manager & QA팀원 C학습 데이터 구축(전처리), 품질 테스트, 시연 데이터 입력
 
 ## 📑 목차 (Table of Contents)
 1. [프로젝트 개요 (Overview)](#1-프로젝트-개요-overview)
