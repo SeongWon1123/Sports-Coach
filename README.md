@@ -123,7 +123,7 @@
 
 ### 🏗️ Architecture
 
-```mermaid
+mermaid
 graph LR
     A[경기 상황 입력 (태블릿)] -->|Query| B(RAG 검색 엔진)
     B -->|Retrieve| C{지식 베이스 DB}
