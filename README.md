@@ -95,3 +95,68 @@ Volley-RAG/
 ├── 📂 docs/                 # 기획서 및 발표 자료
 ├── 📄 requirements.txt      # 필요 라이브러리 목록
 └── 📄 README.md             # 프로젝트 설명서
+
+## 5. 협업 규칙 (Collaboration Rules)
+
+팀원 간의 코드 충돌을 방지하고, 프로젝트의 보안을 유지하기 위한 절대 규칙입니다.
+
+### 🐙 Git Flow 전략
+1.  **Main Branch:** 배포 가능한 상태(Production Ready)만 유지합니다. **절대 직접 Push 금지.**
+2.  **Feature Branch:** 기능 개발 시 `main`에서 브랜치를 따서 작업합니다.
+    - 네이밍 규칙: `feature/기능명` (예: `feature/rag_pipeline`, `feature/ui_design`)
+3.  **Pull Request (PR):** 작업이 끝나면 PR을 날리고, 팀원 1명 이상의 리뷰(Approve)를 받아야 Merge 합니다.
+
+### 📝 Commit Message Convention
+- `[FEAT]` : 새로운 기능 추가
+- `[FIX]` : 버그 수정
+- `[DOCS]` : 문서 수정 (README 등)
+- `[REFACTOR]` : 코드 리팩토링 (기능 변화 없음)
+
+### 🔒 Security (보안 필수)
+- **.gitignore 설정:** 감독님 인터뷰 녹음 파일(`*.mp3`, `*.wav`), 녹취 텍스트(`raw_data.txt`), API Key 파일 등은 절대 깃허브에 올리지 않습니다.
+- **개인정보:** 학생들의 실명이나 민감한 정보는 `Player_A`, `Player_B` 등으로 익명화하여 처리합니다.
+
+---
+
+## 6. [Challenge] 영상 분석 확장 (Advanced Features)
+
+**"텍스트로 코칭하고, 영상으로 증명한다."**
+기본 RAG 시스템이 안정화된 후, 추가 점수(Bonus)를 위해 도입하는 하이브리드 기능입니다.
+
+### 📡 A. 히트맵(Heatmap) 시각화
+전술 지시의 근거를 시각적으로 제시하기 위해, 경기장 내 선수들의 밀집도를 분석합니다.
+* **Tech:** YOLOv8 (객체 탐지) + OpenCV (좌표 변환)
+* **Goal:** "상대 수비가 좌측에 쏠려있음"을 텍스트가 아닌 **빨간색 히트맵 이미지**로 보여줌.
+
+### 🔢 B. 점수판 자동 인식 (Auto Scoreboard)
+매니저의 입력 수고를 덜기 위해 점수판을 자동으로 읽어옵니다.
+* **Tech:** EasyOCR or Tesseract
+* **Goal:** 점수 변동 시 자동으로 RAG 시스템의 'Current Score' 변수 업데이트.
+
+> **Note:** 위 기능은 'Optional'이며, 핵심 기능(RAG) 구현이 완료된 후 진행합니다.
+
+---
+
+## 7. 프로젝트 로드맵 (Roadmap)
+
+학부 졸업작품 일정에 맞춘 개발 단계입니다.
+
+### 📅 Phase 1: 기획 및 데이터 구축 (Weeks 1-3)
+- [x] 지도자 섭외 및 인터뷰 진행 (녹음/녹취)
+- [ ] 데이터 프로토콜 확정 (3등급제)
+- [ ] RAG 지식 베이스(Knowledge Base) 문서화
+
+### 📅 Phase 2: 코어 엔진 개발 (Weeks 4-8)
+- [ ] LangChain 기반 RAG 파이프라인 구축
+- [ ] ChromaDB 벡터 저장소 연동
+- [ ] sLLM (Llama-3/Gemma-2) 프롬프트 엔지니어링 (페르소나 적용)
+
+### 📅 Phase 3: 인터페이스 및 통합 (Weeks 9-12)
+- [ ] Streamlit 웹 대시보드 구현 (태블릿 터치 최적화)
+- [ ] 텍스트 음성 변환 (TTS) 연동
+- [ ] [Challenge] 영상 분석 모듈 테스트
+
+### 📅 Phase 4: 필드 테스트 및 발표 (Weeks 13-16)
+- [ ] 실제 중학교 연습경기 투입 및 데이터 수집
+- [ ] 인간 감독 vs AI 감독 비교 분석 리포트 작성
+- [ ] 최종 발표 및 시연
